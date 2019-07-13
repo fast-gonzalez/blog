@@ -1,5 +1,8 @@
-from django.http import HttpResponse
+from django.views.generic.list import ListView
+
+from blog.models import Article
 
 
-def index(request):
-    return HttpResponse('Hello world!')
+class IndexListView(ListView):
+    model = Article
+    template_name = 'blog/index.html'

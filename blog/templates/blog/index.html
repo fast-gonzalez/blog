@@ -1,0 +1,11 @@
+<h1>My blog</h1>
+<ul>
+{% for article in object_list %}
+  <p>{{ article.title }}</p>
+  <p>{{ article.pub_date }}</p>
+  <p>{{ article.short }}</p>
+  <hr>
+{% empty %}
+  <li>No articles yet.</li>
+{% endfor %}
+</ul>
